@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu</title>
+    <style>
+        body {
+          display: grid;
+          place-items: center;
+        }
+      </style>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="city" >
+        <button type="submit">Gir</button>
+    </form>
+    <h1>{{ name }}</h1>
+    <h4>{{ day }}</h4>
+    <h4>{{ temp }}</h4>
+    <img src="https://openweathermap.org/img/wn/{{ icon }}.png" width="100px">
+    <h3>{{ description }}</h3>
+</body>
+</html>
